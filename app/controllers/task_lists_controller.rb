@@ -31,7 +31,7 @@ class TaskListsController < ApplicationController
       if @task_list.save
 
         # metodo para enviar un correo cuando se guarda un nuevo elemento de la lista con correo
-        if @task_list.email != ''
+        if @task_list.email != '' 
           #EmailNotifierJob.set(run_at: @task_list.start_date).perform_later(@task_list.title, @task_list.email, @task_list.start_date, @task_list.end_date)
         end
         
